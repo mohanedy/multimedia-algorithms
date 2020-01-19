@@ -9,7 +9,6 @@ class RLN {
     for (int i = 0; i < word.length - 1; i++) {
       int count = 1;
       int index = i;
-
       while (word[i] == word[i + 1]) {
         i++;
         count++;

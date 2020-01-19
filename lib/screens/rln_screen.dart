@@ -10,6 +10,7 @@ class RLNScreen extends StatefulWidget {
 class _RLNScreenState extends State<RLNScreen> {
   String _data = '';
   String _res = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

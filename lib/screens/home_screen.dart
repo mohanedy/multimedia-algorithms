@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:multimedia/components/service_card.dart';
+import 'package:multimedia/screens/2d_transformation_screen.dart';
 import 'package:multimedia/screens/arithmetic_coding_screen.dart';
 import 'package:multimedia/screens/huffman_coding_screen.dart';
 import 'package:multimedia/screens/lzw_screen.dart';
 import 'package:multimedia/screens/quant_screen.dart';
+import 'package:multimedia/screens/rln_binary.dart';
 import 'package:multimedia/screens/rln_screen.dart';
 import 'package:multimedia/screens/shannon_screen.dart';
 import 'package:multimedia/screens/simple_repetiton_screen.dart';
@@ -28,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: EdgeInsets.only(left: 8.0, right: 8.0),
         child: GridView(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
@@ -51,12 +53,48 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ServiceCard(
+              'Transformations',
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (c) => TransformationsScreen()));
+              },
+              icon: Icon(
+                Entypo.layers,
+                color: Colors.white,
+                size: 80,
+              ),
+            ),
+            ServiceCard(
               'Simple Repetition',
               onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                         builder: (c) => SimpleRepetitionScreen()));
+              },
+              icon: Icon(
+                AntDesign.shrink,
+                color: Colors.white,
+                size: 80,
+              ),
+            ),
+            ServiceCard(
+              'Run-length Encoding (RLN)',
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (c) => RLNScreen()));
+              },
+              icon: Icon(
+                AntDesign.shrink,
+                color: Colors.white,
+                size: 80,
+              ),
+            ),
+            ServiceCard(
+              'RLN Binary Images',
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (c) => RLNBinary()));
               },
               icon: Icon(
                 AntDesign.shrink,
