@@ -52,7 +52,7 @@ This app is for implementing and simulating multimedia techniques and algorithms
 ## Screenshots
  <img src="https://i.imgur.com/MeRoa0k.png" alt="Shannon-Fano"  height=350> &nbsp; <img src="https://i.imgur.com/rNTK2uI.gif" alt="Quantization"  height=350>
 <br>
- <img src="https://i.imgur.com/BWo04mv.png" alt="Arithmetic-Coding"  height=350> &nbsp <img src="https://i.imgur.com/vI7Q9T0.png" alt="LZW"  height=350>
+ <img src="https://i.imgur.com/BWo04mv.png" alt="Arithmetic-Coding"  height=350> &nbsp; <img src="https://i.imgur.com/vI7Q9T0.png" alt="LZW"  height=350>
 
 
 ## Built With
