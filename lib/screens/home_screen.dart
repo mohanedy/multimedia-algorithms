@@ -103,18 +103,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ServiceCard(
-              'Run-length Encoding (RLN)',
-              onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (c) => RLNScreen()));
-              },
-              icon: Icon(
-                AntDesign.shrink,
-                color: Colors.white,
-                size: 80,
-              ),
-            ),
-            ServiceCard(
               'Shannon-Fano',
               onPressed: () {
                 Navigator.push(context,
