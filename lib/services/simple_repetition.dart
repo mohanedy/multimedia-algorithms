@@ -18,15 +18,11 @@ class SimpleRepetitionAlgorithm {
         }
       }
       if (count > 1) {
-        print(result);
-        print('start ' + startIndex.toString());
-        print('end ' + endIndex.toString());
-        print('length ' + word.length.toString());
         result = result.replaceRange(
             startIndex, endIndex + 1, '_' + word[i] + count.toString() + ',');
       }
     }
-    print(result);
+
     return result;
   }
 

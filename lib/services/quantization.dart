@@ -18,11 +18,10 @@ class QuantizationService {
     sortedSamples = List.from(samples);
     sortedSamples.sort((a, b) => a.compareTo(b));
     range = sortedSamples[sortedSamples.length - 1] - sortedSamples[0];
-    print(range);
+
     delta = range / levels;
-    print(delta);
+
     initRanges();
-    print(levelsRanges);
   }
 
   String binary(int n) {
@@ -55,7 +54,6 @@ class QuantizationService {
         if (sortedSamples.indexOf(samples[j]) == sortedSamples.length - 1) {
           if (levelsRanges[i][0] <= samples[j] &&
               levelsRanges[i][1] >= samples[j]) {
-            print(samples[j].toString() + ' - ' + binary(i));
             result += binary(i);
             binaryData.add(binary(i));
           }
@@ -72,7 +70,6 @@ class QuantizationService {
 
   double calculateError() {
     double error = 0;
-    print(samples.length);
     for (int i = 0; i < binaryData.length; i++) {
       String decimal = int.parse(binaryData[i], radix: 2).toRadixString(10);
       double val = (levelsRanges[int.parse(decimal)][0] +
@@ -84,7 +81,6 @@ class QuantizationService {
       error += diff;
     }
 
-    print(resampling);
     return error;
   }
 }

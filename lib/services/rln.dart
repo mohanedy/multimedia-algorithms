@@ -5,7 +5,7 @@ class RLN {
 
   List<String> encode() {
     List<String> freq = [];
-    print(word.length);
+
     for (int i = 0; i < word.length - 1; i++) {
       int count = 1;
       int index = i;
@@ -16,7 +16,7 @@ class RLN {
       }
       freq.add('(' + word[index].toString() + ',' + count.toString() + ')');
     }
-    print(freq);
+
     return freq;
   }
 
@@ -25,12 +25,11 @@ class RLN {
     String res = '';
     for (int i = 0; i < dataList.length; i++) {
       final current = dataList[i].replaceAll('(', '').replaceAll(')', '');
-      print(current);
+
       final arr = current.split(',');
       final repeated = arr[1];
       final char = arr[0];
-      print(char);
-      print(repeated);
+
       final temp = ''.padRight(int.parse(repeated), char);
       res += temp;
     }

@@ -48,9 +48,9 @@ class HuffmanCodingAlgorithm {
     HuffmanNode root;
     while (queue.length > 1) {
       HuffmanNode x = queue.removeFirst();
-      print(x.char);
+
       HuffmanNode y = queue.removeFirst();
-      print(y.char);
+
       HuffmanNode sumNode = HuffmanNode();
       sumNode.freq = x.freq + y.freq;
       sumNode.char = x.char + y.char;
@@ -60,13 +60,12 @@ class HuffmanCodingAlgorithm {
       queue.add(sumNode);
     }
     generateCode(root, '');
-    print(codeMap);
+
     return {};
   }
 
   void generateCode(HuffmanNode node, String binaryNumber) {
     if (node.left == null && node.right == null && node.char.length == 1) {
-      print(node.char);
       codeMap[node.char] = binaryNumber;
       return;
     }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:multimedia/components/service_card.dart';
 import 'package:multimedia/screens/2d_transformation_screen.dart';
+import 'package:multimedia/screens/about_screen.dart';
 import 'package:multimedia/screens/arithmetic_coding_screen.dart';
 import 'package:multimedia/screens/huffman_coding_screen.dart';
 import 'package:multimedia/screens/lzw_screen.dart';
@@ -145,6 +146,18 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (c) => LZWCodingScreen()));
+              },
+              icon: Icon(
+                AntDesign.shrink,
+                color: Colors.white,
+                size: 80,
+              ),
+            ),
+            ServiceCard(
+              'About',
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (c) => AboutScreen()));
               },
               icon: Icon(
                 AntDesign.shrink,

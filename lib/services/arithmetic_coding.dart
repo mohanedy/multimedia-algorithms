@@ -27,7 +27,6 @@ class ArithmeticCoding {
         key: (k) => k, value: (k) => prob[k]);
 
     calculateRange('', 0, 1, 1, true);
-    print(ranges);
   }
 
   void calculateRange(

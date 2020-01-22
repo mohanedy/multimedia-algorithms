@@ -29,7 +29,6 @@ class LZW {
     }
     output.add(dict.values.last);
     outputSymbols.add(dict.keys.last);
-    print(output);
     return {'sym': outputSymbols, 'code': output};
   }
 

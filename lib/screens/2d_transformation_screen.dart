@@ -36,7 +36,6 @@ class _TransformationsScreenState extends State<TransformationsScreen> {
                   keyboardType: TextInputType.number,
                   onChanged: (s) {
                     if (s.isNotEmpty) {
-                      print(s);
                       scale = double.parse(s);
                     }
                   },
@@ -50,7 +49,6 @@ class _TransformationsScreenState extends State<TransformationsScreen> {
                 ),
                 RaisedButton(
                     onPressed: () {
-                      print(scale);
                       if (scale > 0) {
                         setState(() {});
                       }
